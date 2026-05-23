@@ -9,7 +9,7 @@
   },
   "type": "module",
   "bin": {
-    "aegis": "./bin/aegis.js"
+    "aegis": "bin/aegis.js"
   },
   "files": [
     "bin",
