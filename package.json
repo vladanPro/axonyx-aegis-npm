@@ -1,0 +1,33 @@
+{
+  "name": "@axonyx/aegis",
+  "version": "0.1.0",
+  "description": "Frontend-friendly Aegis CLI for fast response checks.",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/vladanPro/axonyx-aegis-npm.git"
+  },
+  "type": "module",
+  "bin": {
+    "aegis": "./bin/aegis.js"
+  },
+  "files": [
+    "bin",
+    "README.md",
+    "LICENSE"
+  ],
+  "keywords": [
+    "axonyx",
+    "aegis",
+    "e2e",
+    "testing",
+    "react",
+    "nextjs"
+  ],
+  "engines": {
+    "node": ">=18"
+  },
+  "scripts": {
+    "test": "node bin/aegis.js --help && node bin/aegis.js smoke --url https://react.axonyx.dev --expect Axonyx"
+  }
+}
