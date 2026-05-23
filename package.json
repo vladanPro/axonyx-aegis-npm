@@ -1,7 +1,7 @@
 {
   "name": "@axonyx/aegis",
   "version": "0.1.0",
-  "description": "Frontend-friendly Aegis CLI for fast response checks.",
+  "description": "Frontend-friendly npm launcher for the Rust Aegis CLI.",
   "license": "MIT",
   "repository": {
     "type": "git",

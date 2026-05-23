@@ -1,12 +1,14 @@
 # @axonyx/aegis
 
-Frontend-friendly Aegis CLI for fast response checks.
+Frontend-friendly npm launcher for the Rust Aegis CLI.
 
-This npm package is for React, Next, and frontend projects that should not need
-to install Rust/Cargo just to run fast checks.
+This package intentionally does not reimplement the Aegis engine in Node.
+`axonyx-aegis` remains the Rust source of truth, and `@axonyx/aegis` is the npm
+entrypoint for frontend projects.
 
 ```bash
 npm install -D @axonyx/aegis
+cargo install axonyx-aegis --force
 npx aegis init
 npx aegis fast --config aegis.toml
 ```
@@ -24,10 +26,18 @@ expect_text = "Getting Started"
 expect_not = ["Application error"]
 ```
 
-The Rust-native package remains available as:
+For now, the native engine must be installed once with Cargo:
 
 ```bash
 cargo install axonyx-aegis
 ```
 
-Both CLIs share the same `aegis.toml` fast-check syntax.
+If you keep the binary somewhere else, set:
+
+```bash
+AEGIS_NATIVE_PATH=/path/to/aegis npx aegis --help
+```
+
+Long term, this npm package should download or select the native binary
+automatically. Until then, npm stays a thin launcher so the test logic is not
+duplicated in two places.
